@@ -1,0 +1,215 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#382018">
+  <meta name="description" content="Order fudgy homemade brownies from The Brown Table in Barbados.">
+  <title>The Brown Table | Homemade Brownies</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#home">The Brown Table<span>.</span></a>
+    <a class="nav-link" href="#menu">Our brownies</a>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-content">
+        <p class="eyebrow">HOMEMADE IN BARBADOS</p>
+        <h1>A little chocolate goes a long way.</h1>
+        <p class="tagline">
+          Fudgy brownies, baked in small batches.
+        </p>
+        <a class="button button-light" href="#menu">Choose your brownies ↓</a>
+      </div>
+
+      <div class="hero-art" aria-label="Image of a chocolate brownie">
+        <img
+          class="hero-image"
+          src="images/regular-brownie.jpg"
+          alt="Warm fudgy brownie topped with chocolate"
+        >
+        <p>Made for your chocolate cravings.</p>
+      </div>
+    </section>
+
+    <section class="menu-section section" id="menu">
+      <div class="section-heading">
+        <p class="eyebrow">THE MENU</p>
+        <h2>Pick your favourites.</h2>
+        <p>Choose your quantities below. Your total updates automatically.</p>
+      </div>
+
+      <div class="product-grid">
+        <article class="product-card">
+          <div class="product-art classic-art" aria-hidden="true">
+            <img
+              src="images/regular-brownie.jpg"
+              alt="Classic brownie served on a rustic plate"
+            >
+          </div>
+          <div class="product-info">
+            <p class="product-type">THE ORIGINAL</p>
+            <h3>Classic Brownie</h3>
+            <p>Rich, chocolatey and fudgy with a crackly top.</p>
+            <div class="product-bottom">
+              <strong>BDS $3.00</strong>
+              <div class="quantity-control">
+                <button type="button" class="quantity-btn"
+                  data-action="decrease" data-product="classic"
+                  aria-label="Remove one classic brownie">−</button>
+                <output id="classic-quantity" aria-live="polite">0</output>
+                <button type="button" class="quantity-btn"
+                  data-action="increase" data-product="classic"
+                  aria-label="Add one classic brownie">+</button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <div class="product-art oreo-art" aria-hidden="true">
+            <img
+              src="images/oreo-brownie.jpg"
+              alt="Oreo brownie with cookie pieces on top"
+            >
+          </div>
+          <div class="product-info">
+            <p class="product-type">A COOKIE FAVOURITE</p>
+            <h3>Oreo Brownie</h3>
+            <p>Fudgy chocolate brownies with Oreo pieces mixed in.</p>
+            <div class="product-bottom">
+              <strong>BDS $4.00</strong>
+              <div class="quantity-control">
+                <button type="button" class="quantity-btn"
+                  data-action="decrease" data-product="oreo"
+                  aria-label="Remove one Oreo brownie">−</button>
+                <output id="oreo-quantity" aria-live="polite">0</output>
+                <button type="button" class="quantity-btn"
+                  data-action="increase" data-product="oreo"
+                  aria-label="Add one Oreo brownie">+</button>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <p class="capacity-note">
+        Small batches mean limited quantities. Orders are subject to availability.
+      </p>
+    </section>
+
+    <section class="order-section section" id="order">
+      <div class="order-layout">
+        <div class="order-intro">
+          <p class="eyebrow">YOUR BROWNIE ORDER</p>
+          <h2>Make it a brownie kind of day.</h2>
+          <p>
+            Add your details and send your order request through WhatsApp.
+            We'll reply to confirm availability.
+          </p>
+
+          <div class="schedule">
+            <h3>Our weekly schedule</h3>
+            <p><strong>Tuesday, 12 noon:</strong> Preorders close.</p>
+            <p><strong>Wednesday:</strong> Ingredients and baking.</p>
+            <p><strong>Thursday:</strong> Brownie sales at UWI.</p>
+          </div>
+
+          <section class="pickup-section" id="pickup">
+            <h2>Pickup &amp; Collection</h2>
+
+            <div class="pickup-option">
+              <h3>UWI Collection</h3>
+              <p>Available on Thursdays at an arranged campus location.</p>
+            </div>
+
+            <div class="pickup-option">
+              <h3>Other Arrangements</h3>
+              <p>
+                Other collection arrangements may be possible upon request
+                and are subject to confirmation.
+              </p>
+            </div>
+
+            <p class="order-notice">
+              All orders must be confirmed before they are accepted.
+              Weekly preorders close Tuesday at 10:00 PM.
+            </p>
+          </section>
+        </div>
+
+        <form class="order-form" id="order-form">
+          <h3>Your details</h3>
+
+          <label for="customer-name">Your name</label>
+          <input id="customer-name" name="customerName"
+            type="text" maxlength="80" autocomplete="name" required
+            placeholder="Enter your name">
+
+          <label for="customer-phone">Your contact number</label>
+          <input id="customer-phone" name="customerPhone"
+            type="tel" maxlength="30" autocomplete="tel" required
+            placeholder="Enter your phone number">
+
+          <label for="collection">
+  Preferred collection arrangement
+</label>
+
+<select id="collection" name="collection" required>
+  <option value="">Choose an option</option>
+  <option value="UWI Thursday collection">
+    UWI — Thursday collection
+  </option>
+  <option value="Other arrangement requested">
+    Other arrangement — please contact me
+  </option>
+</select>
+
+          <label for="notes">Additional notes (optional)</label>
+          <textarea id="notes" name="notes" rows="3" maxlength="400"
+            placeholder="Any additional information?"></textarea>
+
+          <div class="order-summary">
+            <div class="summary-row">
+              <span>Classic brownies</span>
+              <strong id="classic-summary">0 × $3.00</strong>
+            </div>
+            <div class="summary-row">
+              <span>Oreo brownies</span>
+              <strong id="oreo-summary">0 × $4.00</strong>
+            </div>
+            <div class="summary-row total-row">
+              <span>Estimated total</span>
+              <strong id="order-total">BDS $0.00</strong>
+            </div>
+            <p id="capacity-message" class="capacity-message" aria-live="polite">
+              Select your brownies above to get started.
+            </p>
+          </div>
+
+          <button type="submit" class="button button-primary" id="submit-order">
+            Send order via WhatsApp
+          </button>
+
+          <p class="form-disclaimer">
+            This is an order request, not a confirmed booking. Your order
+            is confirmed only after we reply. No online payment is collected.
+          </p>
+          <p id="form-message" class="form-message" role="status"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <a class="brand footer-brand" href="#home">The Brown Table<span>.</span></a>
+    <p>Fudgy brownies, baked in small batches.</p>
+    <p class="footer-small">Made with care in Barbados.</p>
+  </footer>
+</body>
+</html>
