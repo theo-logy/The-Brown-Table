@@ -57,7 +57,7 @@
             <h3>Classic Brownie</h3>
             <p>Rich, chocolatey and fudgy with a crackly top.</p>
             <div class="product-bottom">
-              <strong>BDS $3.00</strong>
+              <strong>BDS $3.00 each</strong>
               <div class="quantity-control">
                 <button type="button" class="quantity-btn"
                   data-action="decrease" data-product="classic"
@@ -83,7 +83,7 @@
             <h3>Oreo Brownie</h3>
             <p>Fudgy chocolate brownies with Oreo pieces mixed in.</p>
             <div class="product-bottom">
-              <strong>BDS $4.00</strong>
+              <strong>BDS $4.00 each</strong>
               <div class="quantity-control">
                 <button type="button" class="quantity-btn"
                   data-action="decrease" data-product="oreo"
@@ -115,9 +115,13 @@
 
           <div class="schedule">
             <h3>Our weekly schedule</h3>
-            <p><strong>Tuesday, 12 noon:</strong> Preorders close.</p>
+            <p><strong>Tuesday, 10:00 PM:</strong> Preorders close.</p>
             <p><strong>Wednesday:</strong> Ingredients and baking.</p>
-            <p><strong>Thursday:</strong> Brownie sales at UWI.</p>
+            <p>
+              <strong>Thursday:</strong> Preorder collection at UWI. Any
+              brownies left after preorder orders may be available for sale,
+              while supplies last.
+            </p>
           </div>
 
           <section class="pickup-section" id="pickup">
@@ -157,18 +161,17 @@
             placeholder="Enter your phone number">
 
           <label for="collection">
-  Preferred collection arrangement
-</label>
-
-<select id="collection" name="collection" required>
-  <option value="">Choose an option</option>
-  <option value="UWI Thursday collection">
-    UWI — Thursday collection
-  </option>
-  <option value="Other arrangement requested">
-    Other arrangement — please contact me
-  </option>
-</select>
+            Preferred collection arrangement
+          </label>
+          <select id="collection" name="collection" required>
+            <option value="">Choose an option</option>
+            <option value="UWI Thursday collection">
+              UWI — Thursday collection
+            </option>
+            <option value="Other arrangement requested">
+              Other arrangement — please contact me
+            </option>
+          </select>
 
           <label for="notes">Additional notes (optional)</label>
           <textarea id="notes" name="notes" rows="3" maxlength="400"
